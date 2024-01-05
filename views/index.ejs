@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.oL1kXphJT9ufvSEwEMwxjAHaHa?rs=1&pid=ImgDetMain">
+    <title>Weather App</title>
+  </head>
+ <div class="html">
+  <body>
+    <script src="/app.js"></script>
+    <div class="container">
+      <div class="greeting">
+        <h1>Hello There!</h1>
+      </div>
+      <div class="input-form">
+        <form action="/" method="post">
+          <input
+            type="text"
+            name="search"
+            placeholder="Enter a location"
+            autocomplete="off"
+          />
+          <button type="submit"><span>Go!</span></button>
+        </form>
+      </div>
+        <div class="result">
+        <% if(Temp_c !=null) { %>
+        <h1>
+          The temperature in <%= query %> is <%= Temp_c %> celsius
+          <span> ( <%= Temp_f %> fahrenheit ), </span> and it's <%= Description %>. 
+        </h1>
+        <img src="<%= icon %>" alt="" />
+        <p>Last updated at <%= LastUpdate %></p>
+        <p>Currently it's <%= Time %></p>
+        <% } %>
+      </div>
+     
+    </div>
+  </body>
+  <footer style="font-size: small; color: black;">
+    &copy; 2023 - Weather App by the one and only the notorious Sheikh Antoun
+  </footer>
+ </div>
+</html>
